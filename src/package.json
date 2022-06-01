@@ -1,5 +1,5 @@
 {
-  "name": "concrete-mixer-routing-instance-generator",
+  "name": "concrete-mixer-truck-routing-instance-generator",
   "version": "1.0.0",
   "description": "a system to generate instances for the concrete mixer truck routing problem",
   "main": "index.js",
