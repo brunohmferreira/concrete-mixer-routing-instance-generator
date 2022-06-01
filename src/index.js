@@ -48,9 +48,9 @@ const main = () => {
             if (isNaN(concreteMixerTruckCapacity)) process.stdout.write('Invalid value for concrete mixer truck capacity!! Try again...');
         } while (!concreteMixerTruckCapacity || isNaN(concreteMixerTruckCapacity));
 
-        let filename = readlineSync.question('\n File name [default: ConcreteMixerRouting]: ');
+        let filename = readlineSync.question('\n File name [default: ConcreteMixerTruckRouting]: ');
 
-        if(!filename) filename = 'ConcreteMixerRouting.txt';
+        if(!filename) filename = 'ConcreteMixerTruckRouting.txt';
         if(!filename.endsWith(".txt")) filename += '.txt';
 
     try {
