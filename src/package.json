@@ -1,0 +1,28 @@
+{
+  "name": "concrete-mixer-routing-instance-generator",
+  "version": "1.0.0",
+  "description": "a system to generate instances for the concrete mixer truck routing problem",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "generator",
+    "vehicle",
+    "routing",
+    "problem",
+    "VRP",
+    "concrete",
+    "mixer",
+    "truck",
+    "routing",
+    "problem",
+    "instances"
+  ],
+  "author": "Bruno Henrique Mendes Ferreira",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "readline-sync": "^1.4.10"
+  }
+}
