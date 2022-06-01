@@ -15,7 +15,11 @@ function generateInstance (filename, numberOfConstructions, concreteMixerTruckFl
     data += 'distances\n';
     data = fillDistances(data, numberOfConstructions)
 
-    fs.writeFileSync(`../instances/${filename}`, data);
+    fs.mkdir('../instances', { recursive: true }, (err) => {
+        if (err) throw new Error("The folder was not found or could not be opened.");
+        fs.writeFileSync(`../instances/${filename}`, data);
+    });
+    
 }
 
 function fillParameter (data, name, value) {
