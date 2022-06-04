@@ -31,10 +31,12 @@ function fillParameter (data, name, value) {
 }
 
 function fillDemands (data, numberOfConstructions, numberOfTypesOfConcrete, concreteMixerTruckCapacity) {
+    let depot = '0 0 0';
+    data += `${depot}\n`;
     for (let i = 0; i < numberOfConstructions; i++) {
         let randomQuantity = generateRandomDouble(0, concreteMixerTruckCapacity);
         let randomType = generateRandomInt(0, numberOfTypesOfConcrete - 1);
-        data += `${i} ${randomQuantity} ${randomType}\n`;
+        data += `${i+1} ${randomQuantity} ${randomType}\n`;
     }
     data += '\n';
     return data;
@@ -42,8 +44,8 @@ function fillDemands (data, numberOfConstructions, numberOfTypesOfConcrete, conc
 
 function fillDistances (data, numberOfConstructions) {
     let maxDistance = 4394;
-    for (let i = 0; i < numberOfConstructions; i++) {
-        for (let j = 0; j < numberOfConstructions; j++) {
+    for (let i = 0; i <= numberOfConstructions; i++) {
+        for (let j = 0; j <= numberOfConstructions; j++) {
             if (i == j)
                 data += '0\t';
             else
