@@ -34,7 +34,7 @@ function fillDemands (data, numberOfConstructions, numberOfTypesOfConcrete, conc
     let depot = '0 0 0';
     data += `${depot}\n`;
     for (let i = 0; i < numberOfConstructions; i++) {
-        let randomQuantity = generateRandomDouble(0, concreteMixerTruckCapacity);
+        let randomQuantity = generateRandomDouble(0, 1000);
         let randomType = generateRandomInt(0, numberOfTypesOfConcrete - 1);
         data += `${i+1} ${randomQuantity} ${randomType}\n`;
     }

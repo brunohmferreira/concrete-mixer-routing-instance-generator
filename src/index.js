@@ -5,7 +5,6 @@ const { generateInstance } = require('./generator');
 console.clear();
 
 const main = () => {
-
     
         let numberOfConstructions = '';
         let concreteMixerTruckFleet = '';
